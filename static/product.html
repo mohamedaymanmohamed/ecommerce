@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for destination in destinations %}
+        <div>
+            <h2>{{ destination.name }}</h2>
+            <img src="{{ destination.img.url }}" alt="{{ destination.name }}">
+            <p>{{ destination.des }}</p>
+            <p>{{ destination.price }}</p>
+            <p>{{ destination.special }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
